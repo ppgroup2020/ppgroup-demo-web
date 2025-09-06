@@ -15,7 +15,7 @@ if (document.getElementById('btnLogin')){
       if(!res.ok){ msg.textContent = data.error || 'Credenciais inválidas.'; return; }
       localStorage.setItem('ppgroup_token', data.token);
       localStorage.setItem('ppgroup_user', JSON.stringify(data.user));
-      window.location.href = './dashboard.html';
+      window.location.href = '/dashboard.html';
     } catch(e){ msg.textContent = 'Falha na ligação ao servidor.'; }
   });
   [ emailEl, passEl ].forEach(el => el.addEventListener('keydown', (e) => { if(e.key === 'Enter'){ btn.click(); } }));
